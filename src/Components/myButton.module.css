@@ -1,0 +1,9 @@
+.myButton {
+  border: 2px solid teal;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+}
