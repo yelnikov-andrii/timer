@@ -31,8 +31,9 @@ function App() {
   }
 
   function handleReset() {
-    setElapsedTime(0);
     setIsRunning(false);
+    setElapsedTime(0);
+    setTimeToset(0)
   }
 
   function formatTime(seconds) {
@@ -44,7 +45,7 @@ function App() {
   }
 
   function saveTime(time) {
-    localStorage.setItem('time', time);
+    localStorage.setItem('time', time.toString());
   }
 
   useEffect(() => {
@@ -99,7 +100,7 @@ function App() {
         <MyButton onClick={(e) => {
           e.preventDefault();
           saveTime(timeToset);
-          setElapsedTime(timeToset)
+          setElapsedTime(parseInt(timeToset))
         }}>
           Set time
         </MyButton>
