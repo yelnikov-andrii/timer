@@ -55,6 +55,10 @@ function App() {
   }
 }, []);
 
+useEffect(() => {
+  saveTime(elapsedTime);
+},[elapsedTime])
+
 
   return (
     <div className="App">
